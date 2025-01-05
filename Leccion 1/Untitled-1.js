@@ -23,13 +23,30 @@ Null -> Sigfica ausencia de referencia de un objeto
 Undefined -> Significa ausencia de valor
 */
 
-let number = 10;
-console.log(number);
-let string = 'Hello world';
-console.log(string);
+let numero = 10;
+console.log(numero);
+let cadenaDeTexto = "Hello world";
+console.log(cadenaDeTexto);
 let boalno = false;
 console.log(boalno);
 let nulo = null;
 console.log(nulo);
-let vacio = undefined;
+let vacio;
 console.log(vacio);
+
+
+//typeof sirve para saber cual es el tipo de dato de una variable
+//'number' 'string' 'boolean' 'object' 'undefined' 
+console.log(typeof nulo);
+console.log(typeof vacio);
+console.log(typeof cadenaDeTexto);
+console.log(typeof numero);
+console.log(typeof boalno);
+
+//Hoisting 
+variableHoisting = 200;
+console.log(variableHoisting)
+
+var variableHoisting
+variableHoisting = 100;
+console.log(variableHoisting);
