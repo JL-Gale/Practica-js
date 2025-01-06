@@ -50,3 +50,7 @@ console.log(variableHoisting)
 var variableHoisting
 variableHoisting = 100;
 console.log(variableHoisting);
+
+//contastes
+const NUMERO_EJEMPLO = 10;
+const NAME = 'gale';
