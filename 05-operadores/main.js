@@ -18,20 +18,49 @@ console.log(poten);
 console.log("******Asignacion*****");
 let num1 = 10;
 let num2 = 2;
-console.log(num1 += num2);
-console.log(num1 -= num2);
-console.log(num1 *= num2);
-console.log(num1 /= num2);
-console.log(num1 %= num2);
+console.log((num1 += num2));
+console.log((num1 -= num2));
+console.log((num1 *= num2));
+console.log((num1 /= num2));
+console.log((num1 %= num2));
 num1 = 5;
-console.log(num1 **= num2);
-
+console.log((num1 **= num2));
 
 //Comparacion == === != !==
- let comparacionNumero = 30;
+console.log("******Comparacion*****");
+let comparacionNumero = 30;
+console.log(comparacionNumero == "30");
+console.log(comparacionNumero === "30");
 
-//Logicos
+console.log(comparacionNumero != "30");
+console.log(comparacionNumero !== "30");
 
-//Cadena 
+console.log(comparacionNumero < "30"); //False
+console.log(comparacionNumero <= "30"); //True
+console.log(comparacionNumero > "30"); //False
+console.log(comparacionNumero >= "30"); //True
 
-//Incremento y decremento 
+//Logicos || && !
+console.log("******Logicos*****");
+let variableBoolean1 = true;
+let variableBoolean2 = false;
+
+console.log(variableBoolean1 && variableBoolean2);
+console.log(variableBoolean1 || variableBoolean2);
+console.log(!variableBoolean2);
+
+//Cadena
+let mensaje1 = "JL-gale";
+let mensaje2 = "Hola";
+
+let nuevoMensaje = mensaje2 + " " + mensaje1;
+nuevoMensaje += " esta programando en JavaScript"
+console.log(nuevoMensaje);
+
+//Incremento y decremento
+let incremento = 10;
+let decremento = 10;
+incremento++;
+decremento--;
+
+console.log(incremento + " \n" + decremento)
