@@ -36,10 +36,10 @@ console.log(`***********`);
 
 function operaciones(num1, num2) {
   let resultados = {
-    suma: (num1 + num2),
-    resta: (num1 - num2),
-    multiplicacion: (num1 * num2),
-    division: (num1 / num2)
+    suma: num1 + num2,
+    resta: num1 - num2,
+    multiplicacion: num1 * num2,
+    division: num1 / num2,
   };
   return resultados;
 }
@@ -55,21 +55,21 @@ function mostrarPorConsola(num1, num2) {
 }
 
 function mostrarPorPantalla(num1, num2) {
-    let resultados = operaciones(num1, num2);
-    document.write(`<h1>num1: ${num1} num2: ${num2}</h1>`);
-    document.write(`<h2>Resultados</h2>`);
-    document.write(`<h2>Suma: ${resultados.suma}</h2>`);
-    document.write(`<h2>Restas: ${resultados.resta}</h2>`);
-    document.write(`<h2>Multiplicacion: ${resultados.multiplicacion}</h2>`);
-    document.write(`<h2>Division: ${resultados.division}</h2>`);
-    document.write(`<hr>`);
-    return true;
+  let resultados = operaciones(num1, num2);
+  document.write(`<h1>num1: ${num1} num2: ${num2}</h1>`);
+  document.write(`<h2>Resultados</h2>`);
+  document.write(`<h2>Suma: ${resultados.suma}</h2>`);
+  document.write(`<h2>Restas: ${resultados.resta}</h2>`);
+  document.write(`<h2>Multiplicacion: ${resultados.multiplicacion}</h2>`);
+  document.write(`<h2>Division: ${resultados.division}</h2>`);
+  document.write(`<hr>`);
+  return true;
 }
 
 function calculadora(num1, num2, mostrar = false) {
   if (mostrar) {
     mostrarPorConsola(num1, num2);
-  } else{
+  } else {
     mostrarPorPantalla(num1, num2);
   }
   return true;
@@ -77,4 +77,23 @@ function calculadora(num1, num2, mostrar = false) {
 
 calculadora(10, 10, false);
 calculadora(10, 20, true);
+console.log(`***********`);
 
+//Parametros REST
+function misPeliculas(pelicula1, pelicula2, ...restoDepPelis) {
+  console.log(pelicula1);
+  console.log(pelicula2);
+  console.log(restoDepPelis);
+  return true;
+}
+misPeliculas(`Matrix`, `Jhon hicks`, "Toy store", `Ranbo`, `Rocky`);
+console.log(`***********`);
+
+//Operador SPREAD
+let numeros = [1, 2, 3];
+let misNumero = [...numeros, 4, 5, 6, 7, 8, 9, 10];
+console.log(misNumero);
+console.log(`***********`);
+
+let misPeliculasFav = [`Las tortugas ninjas`, `Transformes`];
+misPeliculas(...misPeliculasFav, `Scarface`, "Titanic");
